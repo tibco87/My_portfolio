@@ -1,0 +1,27 @@
+.myProjects {
+    padding: 2rem;
+    background-color: rgb(16,16,26);
+    color: #fff;
+  }
+  
+  .toggleButton {
+    background-color: #00d8ff;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .projectList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .projectCard {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  

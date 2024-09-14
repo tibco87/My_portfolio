@@ -1,0 +1,26 @@
+.scrollToTop {
+    position: fixed;
+    bottom: 80px; /* Umiestnenie nad footer */
+    right: 20px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scrollToTop:hover {
+    background-color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .scrollToTop {
+      bottom: 60px; /* Uprav pozíciu pre menšie obrazovky */
+      left: 10px;
+    }
+  }
+  
