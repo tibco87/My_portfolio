@@ -1,57 +1,93 @@
 .contactForm {
-    padding: 2rem;
-    background-color: rgb(16,16,26);
-    color: #fff;
-    text-align: center;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .input, .textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 0.75rem;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background-color: rgb(16,16,26);
-    color: #fff;
-  }
-  
-  .textarea {
-    height: 150px;
-  }
-  
-  .submitButton {
-    background-color: #00d8ff;
-    color: #000;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submitButton:hover {
-    background-color: #00b4cc;
-  }
-  
-  .contactInfo {
-    margin-top: 2rem;
-  }
-  
-  .icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .icons img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-  
+  padding: 2rem;
+  background-color: rgb(16,16,26);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(210, 213, 212, 0);  /* Tieň zo spodnej strany */
+  cursor: default;
+  box-sizing: border-box;
+}
+
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formBackground {
+  background-color: rgb(29, 29, 46, 0.95);;  /* Nastavenie pozadia pre kontaktný formulár */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px; /* Maximálna šírka formulára */
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný tieň */
+}
+
+.input, .textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem;
+  border: 3px solid #023047;
+  border-radius: 5px;
+  background-color: rgb(16,16,26);
+  color: #fff;
+}
+
+.textarea {
+  height: 150px;
+}
+
+.submitButton {
+  background-color: #76c7c0;
+  color: #023047;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent; /* Pevný border s hrúbkou 2px */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, border-color 0.3s ease; /* Plynulý prechod pre farbu pozadia a border */
+  margin-top: 1.5rem;
+}
+
+.submitButton:hover {
+  background-color: #023047;
+  color: #76c7c0;
+  border-color: #76c7c0; /* Mení farbu borderu bez zmeny hrúbky */
+}
+
+.contactInfo {
+  margin-top: 2rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.8rem;
+}
+
+.icons img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 20%;
+}
+
+.icons :hover {
+  transform: scale(1.2);
+}
+
+.successMessage {
+  color: #28a745; /* Zelená farba pre úspešnú správu */
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.errorMessage {
+  color: #dc3545; /* Červená farba pre chybovú správu */
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
+}

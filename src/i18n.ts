@@ -6,6 +6,9 @@ const resources = {
     translation: {
       aboutMe: "About Me",
       aboutMeTitle: "About Me",
+      aboutMeGreeting: "Hello!", // Preklad pre "Ahoj!"
+      aboutMeWavingHand: "👋", // Emoji ruky
+      aboutMeTypedText: "My name is Tibor Kútik and I am a frontend web developer.", // Upravený preklad bez <p> tagov
       aboutMeDescription: "I am Tibor Kútik, a passionate web developer with expertise in various technologies.",
       mySkills: "My Skills",
       mySkillsTitle: "My Skills",
@@ -20,6 +23,7 @@ const resources = {
       messagePlaceholder: "Your Message",
       submit: "Send Message",
       contactMeVia: "Or contact me via:",
+      messageSentSuccess: "Your message has been sent successfully!",
       createdBy: "Created by"
     }
   },
@@ -27,8 +31,11 @@ const resources = {
     translation: {
       aboutMe: "O mne",
       aboutMeTitle: "O mne",
-      mySkills: "Moje zručnosti",
+      aboutMeGreeting: "Ahoj!", // Preklad pre "Ahoj!"
+      aboutMeWavingHand: "👋", // Emoji ruky
+      aboutMeTypedText: "Moje meno je Tibor Kútik a som frontend web developer.", // Upravený preklad bez <p> tagov
       aboutMeDescription: "Som Tibor Kútik, nadšený webový vývojár so skúsenosťami v rôznych technológiách.",
+      mySkills: "Moje zručnosti",
       mySkillsTitle: "Moje Zručnosti",
       myProjects: "Moje Projekty",
       myProjectsTitle: "Moje Projekty",
@@ -41,6 +48,7 @@ const resources = {
       messagePlaceholder: "Vaša správa",
       submit: "Odoslať správu",
       contactMeVia: "Alebo ma kontaktujte cez:",
+      messageSentSuccess: "Vaša správa bola úspešne odoslaná!",
       createdBy: "Vytvoril"
     }
   }

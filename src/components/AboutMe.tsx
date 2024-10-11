@@ -1,29 +1,35 @@
 import React from 'react';
 import styles from '../styles/aboutMe.module.css';
 import { useTranslation } from 'react-i18next';
-import { ReactTyped } from 'react-typed';
 import profileImage from '../assets/profile.jpg'; // Import obrázku
 
 const AboutMe: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); // Používame preklady
 
   return (
     <section id="aboutMe" className={styles.aboutMe}>
-      <h2>{t('aboutMeTitle')}</h2>
+      {/* Animovaný text "Ahoj!" s rukou, umiestnený nad fotkou */}
+      <div className={styles.waveText}>
+        <span>{t('aboutMeGreeting')} </span>
+        <span className={styles.wave}>{t('aboutMeWavingHand')}</span> {/* Animovaná ruka */}
+      </div>
+      
       <div className={styles.content}>
         <img src={profileImage} alt="Tibor Kútik" className={styles.photo} />
+
+        {/* Animovaný text s menom a profesiou pomocou CSS */}
         <div className={styles.typedText}>
-          <ReactTyped
-            strings={[
-              t('aboutMeDescription'),
-              "I love coding in React and TypeScript!",
-              "Passionate about web development!"
-            ]}
-            typeSpeed={40}
-            backSpeed={50}
-            loop
-          />
+          <span className={styles.typing}>
+            <span className={styles.pTag}>&lt;p&gt;</span> {/* Otvárací <p> tag so žltou farbou */}
+            {t('aboutMeTypedText')} {/* Použitie prekladu */}
+            <span className={styles.pTag}>&lt;/p&gt;</span> {/* Zatvárací </p> tag so žltou farbou */}
+          </span>
         </div>
+
+        {/* Stály text */}
+        <p className={styles.description}>
+          {t('aboutMeDescription')}
+        </p>
       </div>
     </section>
   );

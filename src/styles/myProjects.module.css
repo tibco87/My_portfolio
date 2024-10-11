@@ -2,25 +2,37 @@
     padding: 2rem;
     background-color: rgb(16,16,26);
     color: #fff;
+    text-align: center;
+    cursor: default;
   }
   
   .toggleButton {
-    background-color: #00d8ff;
-    color: #000;
-    padding: 0.5rem 1rem;
-    border: none;
+    background-color: #76c7c0;
+    color: #023047;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.4s ease;
+    margin-top: 1.5rem;
   }
   
+  .toggleButton:hover {
+    background-color: #023047;
+    color: #76c7c0;
+    border: 2px solid #76c7c0;
+  }
+
   .projectList {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-top: 1rem;
+    cursor: default;
   }
   
   .projectCard {
-    background-color: #333;
+    background-color: rgb(29, 29, 46, 0.95);;
     padding: 1rem;
     border-radius: 8px;
   }

@@ -1,26 +1,50 @@
 .scrollToTop {
-    position: fixed;
-    bottom: 80px; /* Umiestnenie nad footer */
-    right: 20px;
-    background-color: #444;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
+  position: fixed;
+  bottom: 90px; /* Pevná pozícia šípky nad footerom */
+  right: 25px;
+  background-color: #76c7c0;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.4s ease;
+  width: 30px;  /* Pevná šírka kontajnera */
+  height: 30px;  /* Pevná výška kontajnera */
+}
+
+.scrollToTop svg {
+  width: 30px;  /* Pevná šírka šípky */
+  height: 30px;  /* Pevná výška šípky */
+  fill: #023047;  /* Zmena farby šípky na tmavú */
+  stroke: #023047;  /* Nastavenie farby šípky */
+  stroke-width: 4px;  /* Nastavenie hrúbky šípky (zväčšenie) */
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;  /* Plynulý prechod */
+}
+
+.scrollToTop:hover svg {
+  fill: #76c7c0;  /* Farba šípky pri hoveri */
+  stroke: #76c7c0;
+  stroke-width: 4px;
+  transition: stroke 0.3s ease, stroke-width 0.3s ease;  /* Plynulý prechod */
+}
+
+.scrollToTop:hover {
+  background-color: #023047;
+}
+
+@media (max-width: 768px) {
+  .scrollToTop {
+    right: 25px;  /* Zostane na pravej strane */
+    bottom: 90px; /* Pevná pozícia aj na menších obrazovkách */
+    width: 30px;  /* Zabezpečí, že šírka zostane pevná */
+    height: 30px; /* Zabezpečí, že výška zostane pevná */
   }
-  
-  .scrollToTop:hover {
-    background-color: #666;
+
+  .scrollToTop svg {
+    width: 30px;  /* Pevná veľkosť šípky aj na menších obrazovkách */
+    height: 30px;
   }
-  
-  @media (max-width: 768px) {
-    .scrollToTop {
-      bottom: 60px; /* Uprav pozíciu pre menšie obrazovky */
-      left: 10px;
-    }
-  }
-  
+}

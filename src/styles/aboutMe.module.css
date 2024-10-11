@@ -1,29 +1,118 @@
 .aboutMe {
-    padding: 2rem;
-    background-color: rgb(16,16,26);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .description {
-    text-align: center;
-    font-size: 1.2rem;
-    max-width: 600px;
-  }
-  
+  padding: 2rem;
+  background-color: rgb(16, 16, 26);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  margin-top: 80px; /* Pridaj dostatok miesta pod header */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: default;
+}
+
+.photo {
+  border-radius: 50%; /* Zachovanie kruhového tvaru */
+  width: 35vw;        /* Šírka obrázka bude 35% šírky aktuálneho zobrazenia */
+  height: 35vw;       /* Výška je rovnaká ako šírka pre zachovanie kruhu */
+  max-width: 35vh;    /* Maximálna šírka pre udržanie pomeru v prípade menších obrazoviek */
+  max-height: 35vh;   /* Maximálna výška pre rovnaký efekt */
+  object-fit: cover;  /* Prispôsobenie obrázka tak, aby vyplnil celý kruh */
+  overflow: hidden;   /* Skrytie častí obrázka mimo kruhu */
+  margin-bottom: 3rem; /* Dolný okraj */
+}
+
+.waveText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem; /* Zvýšená vzdialenosť medzi textom a fotkou */
+  font-size: 2.0em;
+  font-weight: bolder;
+  gap: 1.0rem;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite; /* Animácia ruky */
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Kontajner pre vypisujúci text s pozadím Visual Studio Code */
+.typedText {
+  background-color: #1e1e1e; /* Typické tmavé pozadie VS Code */
+  color: #d4d4d4; /* Svetlá farba textu pre kód */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font pre efekt kódu */
+  padding: 0.5rem 1rem; /* Vnútorné odsadenie pre vzhľad VS Code */
+  border-radius: 4px; /* Zaoblenie rohov */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Jemný tieň pre hĺbku */
+  display: inline-block;
+  max-width: 100%; /* Povolenie maximálnej šírky kontajnera */
+  margin-bottom: 2rem; /* Vzdialenosť medzi vypisujúcim textom a ďalším obsahom */
+  white-space: nowrap; /* Zabezpečí, že text sa nezalomí */
+  overflow: hidden; /* Skrytie pretečeného textu */
+  transform-origin: left center; /* Nastavenie pôvodu transformácie */
+  transform: scale(1); /* Základná veľkosť */
+  width: fit-content; /* Automatická šírka podľa obsahu */
+}
+
+/* Samotný vypisujúci text s animáciou */
+.typedText .typing {
+  font-size: clamp(0.8rem, 2vw, 1.2rem); /* Prispôsobiteľná veľkosť textu od 0.8rem po 1.2rem podľa šírky obrazovky */
+  border-right: 2px solid #d4d4d4; /* Kurzorka na simuláciu písania */
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 12s steps(70, end) forwards, blink-caret 0.75s step-end infinite; /* Predĺžená animácia na 12 sekúnd */
+  color: #9cdcfe; /* Modrá farba pre efekt kódu */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #d4d4d4; }
+}
+
+.description {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Štýly pre prvé písmeno */
+.firstLetter {
+  color: #FFD700; /* Nastav farbu pre prvé písmeno (napr. oranžová/červená) */
+  font-weight: bold; /* Voliteľne môžeš zmeniť aj hrúbku písma */
+}
+
+/* Štýly pre posledné písmeno */
+.lastLetter {
+  color: #FFD700; /* Nastav farbu pre posledné písmeno (napr. zlatá) */
+  font-weight: bold; /* Voliteľne môžeš zmeniť aj hrúbku písma */
+}
+
+/* Štýly pre <p> tagy so žltou farbou */
+.pTag {
+  color: #FFD700; /* Nastavenie farby na žltú */
+  font-weight: bold; /* Voliteľne môžeš zmeniť aj hrúbku písma */
+}

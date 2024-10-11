@@ -5,4 +5,34 @@ body {
     background-color: rgb(16,16,26);
     color: #ffffff;
   }
-  
+
+  /* Šírka scrollbara */
+::-webkit-scrollbar {
+  width: 112px; /* Šírka scrollbara */
+  height: 12px; /* Výška scrollbara pre vodorovný scrollbar */
+}
+
+/* Pozadie scrollbara */
+::-webkit-scrollbar-track {
+  background: rgb(29, 29, 46); /* Farba pozadia (dráhy) scrollbara */
+  border-radius: 10px; /* Zaoblené rohy dráhy scrollbara */
+}
+
+/* Samotný scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #76c7c0; /* Farba samotného scrollbara */
+  border-radius: 10px; /* Zaoblené rohy scrollbara */
+  border: 2px solid #2c2f33; /* Vnútorný border, aby bol scrollbar oddelený od dráhy */
+}
+
+/* Hover efekt pre scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #023047; /* Zmena farby pri hoveri */
+}
+
+/* Vodorovný scrollbar (ak ho máš na stránke) */
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #76c7c0; /* Zmena farby pre vodorovný scrollbar */
+}
+
+/* Firefox scrollbar prispôsobenie
